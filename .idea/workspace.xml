@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4624bf3-f92a-40b6-a84b-e8cb810c5a6a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/resources/CustomerResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/resources/CustomerResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/services/CustomerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

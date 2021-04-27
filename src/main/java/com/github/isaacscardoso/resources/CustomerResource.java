@@ -52,6 +52,14 @@ public class CustomerResource {
         service.delete(id);
     }
 
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void update(@RequestBody CustomerDTO objDTO, @PathVariable String id) {
+        Customer obj = service.fromDTO(objDTO);
+        obj.setId(id);
+        obj = service.update(obj);
+    }
+
 }
 
 

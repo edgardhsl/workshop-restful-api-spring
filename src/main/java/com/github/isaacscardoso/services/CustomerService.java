@@ -37,6 +37,21 @@ public class CustomerService {
         repository.delete(findById(id));
     }
 
+    private void updateData(Customer updatedObj, Customer obj) {
+        updatedObj.setName(obj.getName());
+        updatedObj.setCpf(obj.getCpf());
+        updatedObj.setBirthday(obj.getBirthday());
+        updatedObj.setEmail(obj.getEmail());
+        updatedObj.setPhone(obj.getPhone());
+    }
+
+    public Customer update(Customer obj) {
+        Customer updatedObj = findById(obj.getId());
+        updateData(updatedObj, obj);
+        return repository.save(updatedObj);
+    }
+
+
     public Customer fromDTO(CustomerDTO objDTO) {
         return new Customer(
                 objDTO.getId(), objDTO.getName(), objDTO.getCpf(),
