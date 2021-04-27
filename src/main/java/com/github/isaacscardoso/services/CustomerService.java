@@ -1,6 +1,7 @@
 package com.github.isaacscardoso.services;
 
 import com.github.isaacscardoso.domain.Customer;
+import com.github.isaacscardoso.dto.CustomerDTO;
 import com.github.isaacscardoso.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,5 +27,16 @@ public class CustomerService {
     public Customer findById(String id) {
         return repository.findById(id).orElseThrow(
                 () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Account not found"));
+    }
+
+    public Customer insert(Customer obj) {
+        return repository.insert(obj);
+    }
+
+    public Customer fromDTO(CustomerDTO objDTO) {
+        return new Customer(
+                objDTO.getId(), objDTO.getName(), objDTO.getCpf(),
+                objDTO.getBirthday(), objDTO.getEmail(), objDTO.getPhone()
+        );
     }
 }
