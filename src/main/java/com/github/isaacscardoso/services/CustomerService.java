@@ -33,6 +33,10 @@ public class CustomerService {
         return repository.insert(obj);
     }
 
+    public void delete(String id) {
+        repository.delete(findById(id));
+    }
+
     public Customer fromDTO(CustomerDTO objDTO) {
         return new Customer(
                 objDTO.getId(), objDTO.getName(), objDTO.getCpf(),
