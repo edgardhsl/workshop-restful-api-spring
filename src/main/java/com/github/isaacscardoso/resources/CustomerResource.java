@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/customers")
+@CrossOrigin("http://localhost:4200")
 public class CustomerResource {
 
     private final CustomerService service;

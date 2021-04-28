@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.time.Instant;
 
 @Getter@Setter
 public class CustomerDTO implements Serializable {
@@ -17,6 +18,7 @@ public class CustomerDTO implements Serializable {
     private String birthday;
     private String email;
     private String phone;
+    public Instant registrationDate;
 
     public CustomerDTO() { }
 
@@ -27,5 +29,6 @@ public class CustomerDTO implements Serializable {
         birthday = obj.getBirthday();
         email = obj.getEmail();
         phone = obj.getPhone();
+        registrationDate = obj.getRegistrationDate();
     }
 }

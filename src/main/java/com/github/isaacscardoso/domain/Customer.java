@@ -1,11 +1,13 @@
 package com.github.isaacscardoso.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.Objects;
 
 @Document
@@ -23,6 +25,9 @@ public class Customer implements Serializable {
     private String email;
     private String phone;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
+    public Instant registrationDate;
+
     public Customer(String id, String name, String cpf, String birthday, String email, String phone) {
         this.id = id;
         this.name = name;
@@ -30,6 +35,7 @@ public class Customer implements Serializable {
         this.birthday = birthday;
         this.email = email;
         this.phone = phone;
+        this.registrationDate = Instant.now();
     }
 
     @Override
