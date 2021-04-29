@@ -9,8 +9,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/dto/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/dto/CustomerDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/resources/CustomerResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/resources/CustomerResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/domain/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/domain/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/resources/CustomerResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/resources/CustomerResource.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

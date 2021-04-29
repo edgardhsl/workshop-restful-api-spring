@@ -1,11 +1,17 @@
 package com.github.isaacscardoso.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.github.isaacscardoso.validation.ContactNumberConstraint;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;

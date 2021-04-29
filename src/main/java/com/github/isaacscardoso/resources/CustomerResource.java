@@ -6,6 +6,7 @@ import com.github.isaacscardoso.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -40,7 +41,7 @@ public class CustomerResource {
     }
 
     @PostMapping
-    public ResponseEntity<Void> insert(@RequestBody CustomerDTO objDTO) {
+    public ResponseEntity<Void> insert(@RequestBody @Validated CustomerDTO objDTO) {
         Customer obj = service.fromDTO(objDTO);
         obj = service.insert(obj);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
@@ -55,7 +56,7 @@ public class CustomerResource {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void update(@RequestBody CustomerDTO objDTO, @PathVariable String id) {
+    public void update(@RequestBody @Validated CustomerDTO objDTO, @PathVariable String id) {
         Customer obj = service.fromDTO(objDTO);
         obj.setId(id);
         obj = service.update(obj);
