@@ -6,16 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c4624bf3-f92a-40b6-a84b-e8cb810c5a6a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/dto/CustomerDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/enums/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/enums/OrderStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/resources/CustomerResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/resources/CustomerResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/services/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/domain/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/domain/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/dto/CustomerDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/resources/OrderResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/resources/OrderResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/domain/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/domain/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/domain/enums/OrderStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/domain/enums/OrderStatus.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/resources/CustomerResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/resources/CustomerResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/services/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/services/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/validation/ContactNumberValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/validation/ContactNumberValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/resources/OrderResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/isaacscardoso/resources/OrderResource.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>

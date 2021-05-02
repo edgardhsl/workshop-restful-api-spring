@@ -50,7 +50,7 @@ public class OrderResource {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void update(@RequestBody @Validated Order obj, @PathVariable String id) {
+    public void update(@PathVariable String id, @RequestBody @Validated Order obj) {
         obj.setId(id);
         obj = service.update(obj);
     }

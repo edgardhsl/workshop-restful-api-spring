@@ -1,29 +1,29 @@
 package com.github.isaacscardoso.domain.enums;
 
 import lombok.Getter;
-import lombok.Setter;
 
 public enum OrderStatus {
-    WAITING_PAYMENT(1),
-    PAID(2),
-    SHIPPED(3),
-    DELIVERED(4),
-    CANCELED(5);
+    WAITING_PAYMENT("WAITING PAYMENT"),
+    PAID("PAID"),
+    SHIPPED("SHIPPED"),
+    DELIVERED("DELIVERED"),
+    CANCELED("CANCELED");
 
-    @Getter@Setter
-    private int code;
+    @Getter
+    private final String code;
 
-    OrderStatus(int code) {
+    OrderStatus(String code) {
         this.code = code;
     }
 
-    public static OrderStatus valueOf(int code) {
-        for (OrderStatus value : OrderStatus.values()) {
-            if (value.getCode() == code) {
-                return value;
+    public static OrderStatus fromValue(String code) {
+        if (code != null) {
+            for (OrderStatus value : values()) {
+                if (value.getCode().equals(code)) {
+                    return value;
+                }
             }
         }
         throw new IllegalArgumentException("Invalid OrderStatus code.");
     }
-
 }
