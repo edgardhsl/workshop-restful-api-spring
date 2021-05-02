@@ -1,7 +1,7 @@
 package com.github.isaacscardoso.resources;
 
-import com.github.isaacscardoso.domain.Customer;
-import com.github.isaacscardoso.services.CustomerService;
+import com.github.isaacscardoso.domain.Order;
+import com.github.isaacscardoso.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,31 +13,30 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/customers")
-@CrossOrigin("http://localhost:4200")
-public class CustomerResource {
+@RequestMapping("/api/orders")
+public class OrderResource {
 
-    private final CustomerService service;
+    private final OrderService service;
 
     @Autowired
-    public CustomerResource(CustomerService service) {
+    public OrderResource(OrderService service) {
         this.service = service;
     }
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<Customer> findAll() {
+    public List<Order> findAll() {
         return service.findAll();
     }
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Customer findById(@PathVariable String id) {
+    public Order findById(@PathVariable String id) {
         return service.findById(id);
     }
 
     @PostMapping
-    public ResponseEntity<Void> insert(@RequestBody @Validated Customer obj) {
+    public ResponseEntity<Void> insert(@RequestBody @Validated Order obj) {
         obj = service.insert(obj);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
         return ResponseEntity.created(uri).build();
@@ -51,12 +50,8 @@ public class CustomerResource {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void update(@RequestBody @Validated Customer obj, @PathVariable String id) {
+    public void update(@RequestBody @Validated Order obj, @PathVariable String id) {
         obj.setId(id);
         obj = service.update(obj);
     }
-
 }
-
-
-
