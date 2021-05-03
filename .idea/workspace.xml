@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c4624bf3-f92a-40b6-a84b-e8cb810c5a6a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/configurations/TestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/configurations/TestConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/domain/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/isaacscardoso/services/OrderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

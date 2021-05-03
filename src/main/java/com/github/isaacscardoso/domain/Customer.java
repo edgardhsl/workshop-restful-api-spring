@@ -1,6 +1,7 @@
 package com.github.isaacscardoso.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.github.isaacscardoso.domain.dto.OrderDTO;
 import com.github.isaacscardoso.validation.ContactNumberConstraint;
 import lombok.Getter;
 import lombok.Setter;
@@ -51,7 +52,7 @@ public class Customer implements Serializable {
     @Setter
     private String phone;
 
-    private List<Order> orders;
+    private List<OrderDTO> orders;
 
     // default constructor
     public Customer() { }
@@ -65,6 +66,14 @@ public class Customer implements Serializable {
         this.email = email;
         this.phone = phone;
         this.orders = new ArrayList<>();
+    }
+
+    public void addOrder(OrderDTO order) {
+        orders.add(order);
+    }
+
+    public void removeOrder(OrderDTO order) {
+        orders.remove(order);
     }
 
     @Override

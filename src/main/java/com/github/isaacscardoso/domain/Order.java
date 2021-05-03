@@ -1,6 +1,8 @@
 package com.github.isaacscardoso.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.github.isaacscardoso.domain.dto.CustomerDTO;
 import com.github.isaacscardoso.domain.enums.OrderStatus;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,13 +28,14 @@ public class Order implements Serializable {
 
     private String orderStatus;
 
+    @JsonIgnore
     @Getter@Setter
-    private Customer client;
+    private CustomerDTO client;
 
-    // default constructor
+    // default constsetructor
     public Order() { }
 
-    public Order(String id, OrderStatus orderStatus , Customer client) {
+    public Order(String id, OrderStatus orderStatus, CustomerDTO client) {
         this.id = id;
         this.moment = Instant.now();
         setOrderStatus(orderStatus);
