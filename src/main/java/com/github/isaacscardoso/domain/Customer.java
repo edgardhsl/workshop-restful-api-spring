@@ -1,7 +1,6 @@
 package com.github.isaacscardoso.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.github.isaacscardoso.validation.ContactNumberConstraint;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,36 +18,42 @@ import java.util.List;
 import java.util.Objects;
 
 @Document
-@Getter@Setter
+@Getter
 public class Customer implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
+    @Setter
     private String id;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
     public Instant registrationDate;
 
     @NotEmpty(message = "{field.name.mandatory}")
+    @Setter
     private String name;
 
     @CPF(message = "{field.cpf.invalid}")
     @NotNull(message = "{field.cpf.mandatory}")
+    @Setter
     private String cpf;
 
     @NotEmpty(message = "{field.birthday.mandatory}")
+    @Setter
     private String birthday;
 
     @Email(message = "{field.email.mandatory}")
+    @Setter
     private String email;
 
     @ContactNumberConstraint
+    @Setter
     private String phone;
 
-    @JsonIgnore
-    private List<Order> orders = new ArrayList<>();
+    private List<Order> orders;
 
+    // default constructor
     public Customer() { }
 
     public Customer(String id, String name, String cpf, String birthday, String email, String phone) {
@@ -59,6 +64,7 @@ public class Customer implements Serializable {
         this.birthday = birthday;
         this.email = email;
         this.phone = phone;
+        this.orders = new ArrayList<>();
     }
 
     @Override

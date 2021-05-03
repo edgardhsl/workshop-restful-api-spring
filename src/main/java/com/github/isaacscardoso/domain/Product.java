@@ -12,7 +12,7 @@ import java.util.Set;
 
 @Document
 @Getter
-public class Category implements Serializable {
+public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -23,27 +23,39 @@ public class Category implements Serializable {
     @Setter
     private String name;
 
-    private Set<Product> products;
+    @Setter
+    private String description;
+
+    @Setter
+    private Double price;
+
+    @Setter
+    private String imgUrl;
+
+    private Set<Category> categories;
 
     // default constructor
-    public Category() { }
+    public Product() { }
 
-    public Category(String id, String name) {
+    public Product(String id, String name, String description, Double price, String imgUrl) {
         this.id = id;
         this.name = name;
-        this.products = new HashSet<>();
+        this.description = description;
+        this.price = price;
+        this.imgUrl = imgUrl;
+        this.categories = new HashSet<>();
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Category)) return false;
-        Category category = (Category) o;
-        return id.equals(category.id);
+        if (!(o instanceof Product)) return false;
+        Product product = (Product) o;
+        return getId().equals(product.getId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(getId());
     }
 }

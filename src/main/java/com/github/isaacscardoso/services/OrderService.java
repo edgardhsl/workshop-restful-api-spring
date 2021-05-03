@@ -46,5 +46,4 @@ public class OrderService {
         updateData(updatedObj, obj);
         return repository.save(updatedObj);
     }
-
 }

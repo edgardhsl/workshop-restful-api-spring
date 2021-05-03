@@ -12,20 +12,24 @@ import java.time.Instant;
 import java.util.Objects;
 
 @Document
-@Getter@Setter
 public class Order implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
+    @Getter@Setter
     private String id;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
+    @Getter
     private Instant moment;
 
     private String orderStatus;
+
+    @Getter@Setter
     private Customer client;
 
+    // default constructor
     public Order() { }
 
     public Order(String id, OrderStatus orderStatus , Customer client) {
